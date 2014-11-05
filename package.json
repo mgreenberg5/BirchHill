@@ -1,0 +1,20 @@
+{
+  "name": "Khov_Mortgages_Website",
+  "version": "0.0.1",
+  "description": "KHovnanian Mortgages Website",
+  "main": "Gruntfile.js",
+  "author": "Dan Stauffer",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-coffeelint": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-coffee": "latest",
+    "grunt-contrib-compass": "latest",
+    "grunt-contrib-connect": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-jade": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-watch": "latest"
+  }
+}
