@@ -1,0 +1,131 @@
+// FONT-WEIGHTS
+// ==================================================
+$light: 300
+$normal: 400
+$semiBold: 600
+$bold: 700
+$extraBold: 800
+
+// FONT STYLES
+// ==================================================
+$openSans: 'Open Sans', sans-serif
+
+
+html, body
+  font-family: $openSans
+
+h1
+  font-weight: $extraBold
+  font-size: 44px
+  line-height: 50px
+  letter-spacing: 0.12em
+  margin-bottom: 30px
+  text-transform: uppercase
+
+  @media #{$below-480}
+    font-size: 28px
+    line-height: 32px
+    margin-bottom: 25px
+
+h2
+  text-transform: uppercase
+  font-weight: $extraBold
+  font-size: 20px
+  line-height: 28px
+  letter-spacing: 0.12em
+  margin-bottom: 15px
+
+  @media #{$below-480}
+    font-size: 13px
+    line-height: 20px
+    margin-bottom: 10px
+
+h3
+  font-weight: $extraBold
+  font-size: 18px
+  line-height: 25px
+  letter-spacing: 0.1em
+  margin-bottom: 15px
+
+  @media #{$below-480}
+    font-size: 16px
+    line-height: 22px
+    margin-bottom: 10px
+
+h4
+  color: $black
+  font-weight: $bold
+  font-size: 28px
+  line-height: 35px
+  letter-spacing: 0.08em
+  margin-bottom: 15px
+
+  @media #{$below-480}
+    font-size: 24px
+    line-height: 28px
+    margin-bottom: 10px
+
+p
+  font-weight: $normal
+  font-size: 16px
+  line-height: 28px
+  margin-bottom: 25px
+
+  @media #{$below-480}
+    font-size: 14px
+    line-height: 24px
+    margin-bottom: 20px
+
+a
+  text-decoration: underline
+  color: $black
+
+.button
+  text-decoration: none
+  color: $black
+  font-family: $openSans
+  font-weight: $extraBold
+  font-size: 14px
+  display: inline-block
+  line-height: 18px
+  letter-spacing: 0.1em
+  background-color: $white
+  border: $black 1px solid
+  text-transform: uppercase
+  padding: 20px 50px
+  cursor: pointer
+  text-align: center
+  margin: 0 5px
+
+  @media #{$below-1024}
+    padding: 20px 30px
+
+  &:hover
+    background-color: $black
+
+ul
+  margin-bottom: 20px
+
+  @media #{$below-480}
+    margin-bottom: 15px
+
+ul, li, ol
+  font-weight: $normal
+  font-size: 16px
+  line-height: 30px
+
+  @media #{$below-480}
+    font-size: 14px
+    line-height: 28px
+
+em, i
+  font-style: italic
+
+strong, b
+  font-weight: $bold
+
+br
+  line-height: inherit
+
+.uppercase
+  text-transform: uppercase
