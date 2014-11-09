@@ -1,8 +1,32 @@
 {
-	"folders":
-	[
-		{
-			"path": "/Users/michaelgreenberg/Documents/Workspace/BirchHill/BirchHill"
-		}
-	]
+  "folders":
+  [
+    {
+      "file_exclude_patterns":
+      [
+        "*.sublime-workspace"
+      ],
+      "folder_exclude_patterns":
+      [
+        "node_modules",
+        ".sass-cache",
+        "bin",
+        "dependencies",
+        "dist",
+        ".git",
+        ".tmp",
+        "css"
+      ],
+      "name": "Birch Hill Landscaping",
+      "path": "."
+    }
+  ],
+  "settings":
+  {
+    "detect_indentation": false,
+    "ensure_newline_at_eof_on_save": true,
+    "tab_size": 2,
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": true
+  }
 }
