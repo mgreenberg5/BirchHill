@@ -1,9 +1,9 @@
 {
   "name": "Khov_Mortgages_Website",
   "version": "0.0.1",
-  "description": "KHovnanian Mortgages Website",
+  "description": "Birch Hill Landscaping Website",
   "main": "Gruntfile.js",
-  "author": "Dan Stauffer",
+  "author": "Greenberg",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-coffeelint": "latest",
