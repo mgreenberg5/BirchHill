@@ -67,8 +67,8 @@ module.exports = function(grunt) {
         },
         files: {
           "bin/javascripts/main.js": [
-            "src/javascripts/lib/*.coffee",
-            "src/javascripts/lib/prequalification/**/*.coffee"
+            "src/javascripts/*.coffee",
+            "src/javascripts/prequalification/**/*.coffee"
           ]
         }
       }
