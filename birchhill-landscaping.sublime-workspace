@@ -519,30 +519,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "README.md",
-			"settings":
-			{
-				"buffer_size": 854,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": ".gitignore",
-			"settings":
-			{
-				"buffer_size": 174,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "birchhill-landscaping.sublime-workspace",
-			"settings":
-			{
-				"buffer_size": 499,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -628,7 +604,6 @@
 	},
 	"file_history":
 	[
-		"/Users/michaelgreenberg/Documents/Workspace/BirchHill/BirchHill/src/index.jade",
 		"/Users/michaelgreenberg/Documents/Workspace/BirchHill/BirchHill/src/prequalify-now/prequalify-good-bye.jade",
 		"/Users/michaelgreenberg/Documents/Workspace/BirchHill/BirchHill/src/javascripts/lib/prequalification/models/field.coffee",
 		"/Users/michaelgreenberg/Documents/Workspace/BirchHill/BirchHill/src/styles/_forms.sass",
@@ -755,7 +730,8 @@
 		"/Users/michaelgreenberg/Documents/Workspace/khov-mortgages/khov-mortgages/src/forms/prequalify_Step0.jade",
 		"/Users/michaelgreenberg/Documents/Workspace/khov-mortgages/khov-mortgages/src/forms/good_bye.jade",
 		"/Users/michaelgreenberg/Documents/Workspace/khov-mortgages/khov-mortgages/src/forms/prequalify_Step4.jade",
-		"/Users/michaelgreenberg/Documents/Workspace/khov-mortgages/khov-mortgages/src/forms/prequalify_Step2.jade"
+		"/Users/michaelgreenberg/Documents/Workspace/khov-mortgages/khov-mortgages/src/forms/prequalify_Step2.jade",
+		"/Users/michaelgreenberg/Documents/Workspace/khov-mortgages/khov-mortgages/src/styles/_reset.sass"
 	],
 	"find":
 	{
@@ -1003,94 +979,13 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "README.md",
-					"settings":
-					{
-						"buffer_size": 854,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								314,
-								314
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": ".gitignore",
-					"settings":
-					{
-						"buffer_size": 174,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								129,
-								129
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		},
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 2,
-					"file": "birchhill-landscaping.sublime-workspace",
-					"settings":
-					{
-						"buffer_size": 499,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								499,
-								499
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1122,7 +1017,7 @@
 		"cols":
 		[
 			0.0,
-			0.521672156736,
+			0.494945368604,
 			1.0
 		],
 		"rows":
