@@ -1,6 +1,7 @@
 *.DS_Store
 
 # Sublime Text workspace
+*.sublime-project
 *.sublime-workspace
 
 # Grunt, Sass, and node_modules
