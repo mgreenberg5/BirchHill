@@ -4,7 +4,18 @@ include ../templates/footer
 
 body
   .wrapper
-    +navigation
-    .container
-      p body
-    +footer
+  +navigation
+  #Index.body
+    .aSpot
+    .row.bgTan
+      .container
+        .column.oneThird
+          img(src="../images/testimonialPerson1.png")
+        .column.twoThirds
+          h2 Lorem ipsum dolor sit amet, consectet adipiscing elit. In porttitor neque eu elit. Sed consequat ex eu finibus viverra.
+    .row.bgBrown
+      .container
+        .column.oneThird
+        .column.twoThirds
+          p Lorem ipsum dolor sit amet, consectet adipiscing elit. In porttitor neque eu elit. Sed consequat ex eu finibus viverra.
+  +footer
