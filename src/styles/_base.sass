@@ -13,7 +13,7 @@ $below-480 : "only screen and (max-width : 480px)"
   -ms-border-radius: $radius
   border-radius: $radius
 
-=border-box($box)
+=box-sizing($box)
   -webkit-box-sizing: $box
   -moz-box-sizing: $box
   box-sizing: $box
@@ -44,14 +44,14 @@ $below-480 : "only screen and (max-width : 480px)"
   margin: 0 auto
   padding: 0
 
-.body .row
-  padding: 50px 0
-
 .row:after
   margin: 0
   content: ""
   display: table
   clear: both
+
+.body > .row
+  padding: 50px 0
 
 .column
   float: left

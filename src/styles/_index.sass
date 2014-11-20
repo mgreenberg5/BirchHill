@@ -1,7 +1,26 @@
 #Index
 
   .aSpot
-    background: url('../images/bgIndex.jpg') center center no-repeat
-    +retina-background-image('../images/bgIndex@2x.jpg')
+    background: url("../images/bgIndex.jpg") center center no-repeat
+    +retina-background-image("../images/bgIndex@2x.jpg")
     background-size: cover
     height: 480px
+
+  .quote
+
+    &:before
+      content: url("../images/quoteStart.png")
+      position: absolute
+      margin: -10px 0 0 -50px
+
+    &:after
+      content: url("../images/quoteEnd.png")
+      position: absolute
+      margin: 10px 0 0 50px
+
+  .thumb
+    width: 100%
+    height: 100%
+    border: 5px solid $tan
+    +box-sizing(border-box)
+
