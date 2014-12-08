@@ -47,14 +47,17 @@ body
   margin: 0 auto
   padding: 0 20px
 
+.row
+  padding-bottom: 60px
+
+.body > .row
+  padding: 80px 0 20px 0
+
 .row:after
   margin: 0
   content: ""
   display: table
   clear: both
-
-.body > .row
-  padding: 70px 0
 
 .column
   float: left
@@ -109,6 +112,22 @@ body
 
 .oneFourth
   width: 23.5%
+  margin: 0 1%
+
+  @media #{$below-768}
+    width: 100%
+    margin: 0 0 50px 0
+    text-align: center
+
+  &:first-child
+    margin-left: 0
+
+  &:last-child
+    margin-right: 0
+    margin-bottom: 0
+
+.threeFourths
+  width: 74.5%
   margin: 0 1%
 
   @media #{$below-768}

@@ -8,7 +8,7 @@ $(window).resize(() ->
     animateSideNav()
 )
 
-$(document).on('click', ".mobileMenu", () -> animateSideNav())
+$(document).on('click', "#MobileMenu", () -> animateSideNav())
 $(document).on('click', ".bodyOverlay", () -> animateSideNav())
 
 animateSideNav = (() ->
