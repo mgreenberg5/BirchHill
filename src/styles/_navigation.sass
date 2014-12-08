@@ -1,15 +1,34 @@
 #Navigation
   background-color: $green
 
+  #Logo
+    padding: 20px 0
+    margin-bottom: 0
+
+  #MobileMenu
+    display: none
+    border-bottom: 10px double $brown
+    border-top: 3px solid $brown
+    content: ""
+    height: 4px
+    width: 25px
+    cursor: pointer
+    z-index: 99
+    position: absolute
+    top: 50px
+
+    @media #{$below-768}
+      display: block
+
   #Nav
 
     @media #{$below-768}
       position: fixed
-      background: $green
+      background: $brown
       width: 250px
       height: 100%
       top: 0
-      left: -250px
+      left: 0
       z-index: -99
       display: block
 
@@ -18,11 +37,19 @@
 
     li
       display: inline
-      padding: 0 25px
+      padding: 0 30px
       line-height: 80px
 
       @media #{$below-1024}
-        padding: 0 10px
+        padding: 0 20px
+
+      @media #{$below-768}
+        display: block
+        line-height: 20px
+        text-align: left
+        padding: 20px
+        background: $tan
+        border-bottom: $brown 1px solid
 
     a
       color: $tan
@@ -34,18 +61,14 @@
       letter-spacing: 0.05em
       text-transform: uppercase
 
-  .mobileMenu
-    display: none
-    border-bottom: 10px double white
-    border-top: 3px solid white
-    content: ""
-    height: 4px
-    width: 25px
-    cursor: pointer
-    z-index: 99
+      @media #{$below-768}
+        color: $green
 
-    @media #{$below-768}
-      display: block
+    .mobileItem
+      display: none
+
+      @media #{$below-768}
+        display: block
 
 .hidden
   overflow-x: hidden
@@ -62,4 +85,4 @@
   height: 100%
   display: none
   z-index: 9999
-  background-color: rgba(0, 0, 0, 0.3)
+  background: url("../images/overlay.png") center center repeat

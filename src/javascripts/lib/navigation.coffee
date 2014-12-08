@@ -1,6 +1,6 @@
 animationSpeed = 300
 menuOpen = false
-desktopWindowWidth = 1025
+desktopWindowWidth = 768
 
 $(window).resize(() ->
   if $(window).width() > desktopWindowWidth
@@ -13,14 +13,12 @@ $(document).on('click', ".bodyOverlay", () -> animateSideNav())
 
 animateSideNav = (() ->
   if menuOpen
-    menuXPosition = '-250px'
     bodyXPosition = '0'
     $("html").removeClass('hidden')
     $("body").removeClass('hidden')
     $(".bodyOverlay").css("display", "none")
     menuOpen = false
   else
-    menuXPosition = '0px'
     bodyXPosition = '250px'
     $("html").addClass('hidden')
     $("body").addClass('hidden')
