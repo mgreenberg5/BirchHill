@@ -1,36 +1,81 @@
 #Index
 
   .aSpot
-    background: url("../images/bgIndex.jpg") center center no-repeat
-    +retina-background-image("../images/bgIndex@2x.jpg")
-    background-size: cover
     height: 480px
 
+    .sss
+      height: 480px
+
+    .image1
+      background: url("../images/bgIndex.jpg") center center no-repeat
+      +retina-background-image("../images/bgIndex@2x.jpg")
+      background-size: cover
+      height: 480px
+
+    .image2
+      background: url("../images/bgIndex.jpg") center center no-repeat
+      +retina-background-image("../images/bgIndex@2x.jpg")
+      background-size: cover
+      height: 480px
+
+    .image3
+      background: url("../images/bgIndex.jpg") center center no-repeat
+      +retina-background-image("../images/bgIndex@2x.jpg")
+      background-size: cover
+      height: 480px
+
   .quote
+    width: 10%
+    margin: 0 1%
 
-    &:before
-      content: url("../images/quoteStart.png")
-      position: absolute
-      margin: -10px 0 0 -50px
+    @media #{$below-768}
+      width: 100%
+      margin: 0 0 50px 0
+      text-align: center
 
-    &:after
-      content: url("../images/quoteEnd.png")
-      position: absolute
-      margin: 10px 0 0 50px
+    &:first-child
+      margin-left: 0
+
+    &:last-child
+      margin-right: 0
+      margin-bottom: 0
+
+  .right
+    float: right
+    padding-right: 20px
+
+    @media #{$below-768}
+      float: none
+      padding-right: 0
+
+  .quoteText
+    width: 76%
+    margin: 0 1%
+
+    @media #{$below-768}
+      width: 100%
+      margin: 0 0 50px 0
+      text-align: center
+
+    &:first-child
+      margin-left: 0
+
+    &:last-child
+      margin-right: 0
+      margin-bottom: 0
+
+  //   &:before
+  //     content: url("../images/quoteStart.png")
+  //     position: absolute
+  //     margin: -10px 0 0 -50px
+
+  //   &:after
+  //     content: url("../images/quoteEnd.png")
+  //     position: absolute
+  //     margin: 10px 0 0 50px
 
   .thumb
     width: 100%
     height: 100%
     border: 5px solid $tan
     +box-sizing(border-box)
-
-
-.banner
-  position: relative
-  overflow: auto
-
-  li
-    list-style: none
-
-  ul li
-    float: left
