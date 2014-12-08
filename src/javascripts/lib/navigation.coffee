@@ -2,11 +2,6 @@ animationSpeed = 300
 menuOpen = false
 desktopWindowWidth = 1025
 
-$(document).ready(() ->
-  $(".navMainTop a[href^=\"../" + getSectionPathComponent() + "\"]").addClass("active")
-  $(".navSecondary .section ul li a[href^=\"" + getPagePathComponent() + "\"]").addClass("active")
-)
-
 $(window).resize(() ->
   if $(window).width() > desktopWindowWidth
     menuOpen = true
@@ -14,19 +9,22 @@ $(window).resize(() ->
 )
 
 $(document).on('click', ".mobileMenu", () -> animateSideNav())
+$(document).on('click', ".bodyOverlay", () -> animateSideNav())
 
 animateSideNav = (() ->
   if menuOpen
     menuXPosition = '-250px'
     bodyXPosition = '0'
+    $("html").removeClass('hidden')
     $("body").removeClass('hidden')
-    $(".navMain").removeClass('shadow')
+    $(".bodyOverlay").css("display", "none")
     menuOpen = false
   else
     menuXPosition = '0px'
     bodyXPosition = '250px'
+    $("html").addClass('hidden')
     $("body").addClass('hidden')
-    $(".navMain").addClass('shadow')
+    $(".bodyOverlay").css("display", "block")
     menuOpen = true
 
   $("body").stop().animate(
@@ -34,12 +32,8 @@ animateSideNav = (() ->
     animationSpeed
   )
 
-  $(".navMain").stop().animate(
+  $("#Nav").stop().animate(
     left: menuXPosition
     animationSpeed
   )
 )
-
-getSectionPathComponent = () -> location.pathname.split("/").reverse()[1]
-
-getPagePathComponent = () -> location.pathname.split("/").reverse()[0]

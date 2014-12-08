@@ -2,12 +2,27 @@
   background-color: $green
 
   #Nav
-    margin-top: 30px
-    float: right
+
+    @media #{$below-768}
+      position: fixed
+      background: $green
+      width: 250px
+      height: 100%
+      top: 0
+      left: -250px
+      z-index: -99
+      display: block
+
+    ul
+      text-align: right
 
     li
       display: inline
       padding: 0 25px
+      line-height: 80px
+
+      @media #{$below-1024}
+        padding: 0 10px
 
     a
       color: $tan
@@ -18,3 +33,33 @@
       line-height: 16px
       letter-spacing: 0.05em
       text-transform: uppercase
+
+  .mobileMenu
+    display: none
+    border-bottom: 10px double white
+    border-top: 3px solid white
+    content: ""
+    height: 4px
+    width: 25px
+    cursor: pointer
+    z-index: 99
+
+    @media #{$below-768}
+      display: block
+
+.hidden
+  overflow-x: hidden
+  overflow-y: hidden
+  height: 100%
+  width: 100%
+  margin: 0
+  padding: 0
+  position: absolute
+
+.bodyOverlay
+  position: absolute
+  width: 100%
+  height: 100%
+  display: none
+  z-index: 9999
+  background-color: rgba(0, 0, 0, 0.3)

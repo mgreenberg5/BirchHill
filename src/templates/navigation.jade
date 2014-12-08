@@ -1,11 +1,13 @@
 mixin navigation
   #Navigation
+    .bodyOverlay
     .row
       .container
-        #Logo.column
+        #Logo.column.oneThird
           a(href="../index/index.html")
-            img(src="../images/global/logo.png")
-        #Nav.column
+            img(src="../images/logo.png" style="width:150px; height:75px")
+          .mobileMenu
+        #Nav.column.twoThirds
           ul
             li.mobileItem
               a(href="../index/index.html") Home
