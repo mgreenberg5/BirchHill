@@ -8,7 +8,7 @@ $(window).resize(() ->
     animateSideNav()
 )
 
-$(document).on('click', "#MobileMenu", () -> animateSideNav())
+$(document).on('click', "#MoibleMenu", () -> animateSideNav())
 $(document).on('click', ".bodyOverlay", () -> animateSideNav())
 
 animateSideNav = (() ->
@@ -16,12 +16,14 @@ animateSideNav = (() ->
     bodyXPosition = '0'
     $("html").removeClass('hidden')
     $("body").removeClass('hidden')
+    $("#MoibleMenu").removeClass('active')
     $(".bodyOverlay").css("display", "none")
     menuOpen = false
   else
     bodyXPosition = '250px'
     $("html").addClass('hidden')
     $("body").addClass('hidden')
+    $("#MoibleMenu").addClass('active')
     $(".bodyOverlay").css("display", "block")
     menuOpen = true
 
