@@ -9,7 +9,7 @@
     "grunt-coffeelint": "latest",
     "grunt-contrib-clean": "latest",
     "grunt-contrib-coffee": "latest",
-    "grunt-contrib-compass": "latest",
+    "grunt-contrib-sass": "latest",
     "grunt-contrib-connect": "latest",
     "grunt-contrib-copy": "latest",
     "grunt-contrib-jade": "latest",
