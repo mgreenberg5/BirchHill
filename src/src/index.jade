@@ -5,6 +5,33 @@ include ../templates/footer
 body
   .wrapper
     +navigation
-    .container
-      p body
+    #Index
+      .aSpot.slider
+        .imageCover.image1
+        .imageCover.image2
+        .imageCover.image3
+      .section.bgTan
+        .container
+          .row
+            h1.center Testimonial
+          .row#Testimonial
+            .column.quote
+              img.right(src="../images/quoteStart.png")
+            .column.quoteText
+              h2 Lorem ipsum dolor sit amet, consectet adipiscing elit. In porttitor neque eu elit. Sed consequat ex eu finibus viverra.
+            .column.quote
+              img(src="../images/quoteEnd.png")
+      .section.bgBrown
+        .container
+          .row
+            h1.center Featured Work
+          .row
+            .column.oneFourth
+              img.thumb(src="../images/featured-work/work1.jpg")
+            .column.oneFourth
+              img.thumb(src="../images/featured-work/work1.jpg")
+            .column.oneFourth
+              img.thumb(src="../images/featured-work/work1.jpg")
+            .column.oneFourth
+              img.thumb(src="../images/featured-work/work1.jpg")
     +footer

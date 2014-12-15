@@ -1,0 +1,70 @@
+#Index
+
+  .aSpot, .sss, .imageCover
+    height: 500px
+
+    @media #{$below-1024}
+      height: 450px
+
+    @media #{$below-768}
+      height: 350px
+
+    .image1
+      background: url("../images/slider/bgIndex.jpg") center center no-repeat
+      +retina-background-image("../images/slider/bgIndex@2x.jpg")
+      background-size: cover
+
+    .image2
+      background: url("../images/slider/bgIndex.jpg") center center no-repeat
+      +retina-background-image("../images/slider/bgIndex@2x.jpg")
+      background-size: cover
+
+    .image3
+      background: url("../images/slider/bgIndex.jpg") center center no-repeat
+      +retina-background-image("../images/slider/bgIndex@2x.jpg")
+      background-size: cover
+
+  .quote
+    width: 10%
+    margin: 0 1%
+
+    @media #{$below-768}
+      width: 100%
+      text-align: center
+
+    &:first-child
+      margin-left: 0
+
+    &:last-child
+      margin-right: 0
+      margin-bottom: 0
+
+  .right
+    float: right
+    padding-right: 20px
+
+    @media #{$below-768}
+      float: none
+      padding-right: 0
+
+  .quoteText
+    width: 76%
+    margin: 0 1%
+
+    @media #{$below-768}
+      width: 100%
+      margin: 25px 0
+      text-align: center
+
+    &:first-child
+      margin-left: 0
+
+    &:last-child
+      margin-right: 0
+      margin-bottom: 0
+
+  .thumb
+    width: 100%
+    height: 100%
+    border: 5px solid $tan
+    +box-sizing(border-box)

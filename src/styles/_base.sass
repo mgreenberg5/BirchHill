@@ -13,7 +13,7 @@ $below-480 : "only screen and (max-width : 480px)"
   -ms-border-radius: $radius
   border-radius: $radius
 
-=border-box($box)
+=box-sizing($box)
   -webkit-box-sizing: $box
   -moz-box-sizing: $box
   box-sizing: $box
@@ -38,18 +38,32 @@ body
   position: relative
 
 .wrapper
-  max-width: 1200px
-  margin: 0 auto
+  width: 100%
+  margin: 0
   padding: 0
 
-.row:after
-  margin: 0
-  content: ""
-  display: table
-  clear: both
+.container
+  max-width: 1240px
+  margin: 0 auto
+  padding: 0 20px
+
+.section
+  padding: 80px 0 20px 0
+
+.row
+  padding-bottom: 60px
+
+  &:after
+    margin: 0
+    content: ""
+    display: table
+    clear: both
 
 .column
   float: left
+
+.column > *:last-child
+  margin: 0
 
 .oneHalf
   width: 49%
@@ -115,11 +129,33 @@ body
     margin-right: 0
     margin-bottom: 0
 
+.threeFourths
+  width: 74.5%
+  margin: 0 1%
+
+  @media #{$below-768}
+    width: 100%
+    margin: 0 0 50px 0
+    text-align: center
+
+  &:first-child
+    margin-left: 0
+
+  &:last-child
+    margin-right: 0
+    margin-bottom: 0
+
 .center
   text-align: center
 
 .spacer
   margin: 50px 0 0 0
+
+.bgTan
+  background-color: $tan
+
+.bgBrown
+  background-color: $brown
 
 // TABLE LAYOUT
 // ==================================================

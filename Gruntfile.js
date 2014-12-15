@@ -2,7 +2,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-coffeelint');
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
   grunt.registerTask(
     'styles',
     'Compiles the stylesheets',
-    ['compass']
+    ['sass']
   );
   grunt.registerTask(
     'scripts',
@@ -41,23 +41,23 @@ module.exports = function(grunt) {
         },
         files: [ {
           cwd: "src/",
-          src: "**/*.jade",
           dest: "bin/",
           expand: true,
-          ext: ".html"
+          ext: ".html",
+          src: "**/*.jade"
         } ]
       }
     },
-    compass: {
-      options: {
-        config: "config.rb",
-        outputStyle: 'compressed'
-      },
-      css: {
+    sass: {
+      compile: {
         options: {
-          sassDir: "src/styles/",
-          cssDir: "bin/css/"
-        }
+          style: "compressed"
+        },
+        cwd: "src/styles/",
+        dest: "bin/css/",
+        expand: true,
+        ext: ".css",
+        src: "**/*.sass"
       }
     },
     coffee: {
