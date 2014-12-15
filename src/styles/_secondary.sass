@@ -9,7 +9,7 @@
     @media #{$below-768}
       height: 250px
 
-#About, #Services, #Gallery, #Contact
+#About, #Services, #Contact
 
   .image1
     background: url("../images/slider/bgIndex.jpg") center center no-repeat
@@ -28,16 +28,17 @@
 
 #Gallery
 
-  #enlarged_image
-    position: fixed
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
+  #EnlargedImage
+    position: relative
+    height: 600px
     background: #fff no-repeat center center
     background-size: cover
-    display: none
-    z-index: 500
+
+    @media #{$below-1024}
+      height: 550px
+
+    @media #{$below-768}
+      height: 450px
 
   .thumb
     background: none repeat scroll 0 0 #fff
@@ -61,7 +62,7 @@
     &:hover img
       opacity: .35
 
-  #gallery_controls
+  .galleryControls
     position: absolute
     right: 0
     top: 50%
@@ -81,14 +82,14 @@
       color: #000
       border-bottom: 1px solid #ccc
 
-    .gallery_next, .gallery_prev, .gallery_close
+    .galleryNext, .galleryPrev, .galleryClose
       cursor: pointer
 
-    .gallery_next
+    .galleryNext
       background-image: url(http://www.dahea.net/codepen/180/img/gallery_next.jpg)
 
-    .gallery_prev
+    .galleryPrev
       background-image: url(http://www.dahea.net/codepen/180/img/gallery_prev.jpg)
 
-    .gallery_close
+    .galleryClose
       background-image: url(http://www.dahea.net/codepen/180/img/gallery_close.jpg)

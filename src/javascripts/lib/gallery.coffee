@@ -2,27 +2,27 @@ galleryScripts = ->
   galleryLength = $(".thumb").length
   galleryCounter = undefined
   $(".thumb").click ->
-    $("#enlarged_image").fadeIn()
-    $("#enlarged_image").css "background-image": "url(" + $(this).data("largeimg") + ")"
+    $("#EnlargedImage").fadeIn()
+    $("#EnlargedImage").css "background-image": "url(" + $(this).data("largeimg") + ")"
     galleryCounter = $(this).index()
-    $(".gallery_counter").html galleryCounter + " / " + $(".thumb").length
+    $(".galleryCounter").html galleryCounter + " / " + $(".thumb").length
 
-  $(".gallery_next").click ->
+  $(".galleryNext").click ->
     if galleryCounter < galleryLength
       galleryCounter += 1
     else
       galleryCounter = 1
     $(".thumb:eq(" + (galleryCounter - 1) + ")").trigger "click"
 
-  $(".gallery_prev").click ->
+  $(".galleryPrev").click ->
     if galleryCounter <= galleryLength and galleryCounter > 1
       galleryCounter -= 1
     else
       galleryCounter = galleryLength
     $(".thumb:eq(" + (galleryCounter - 1) + ")").trigger "click"
 
-  $(".gallery_close").click ->
-    $("#enlarged_image").fadeOut()
+  $(".galleryClose").click ->
+    $("#EnlargedImage").fadeOut()
 
 $(window).load ->
   galleryScripts()
