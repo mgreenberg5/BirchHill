@@ -1,6 +1,6 @@
 #Index
 
-  .aSpot .sss
+  .aSpot, .sss, .imageCover
     height: 500px
 
     @media #{$below-1024}
@@ -23,15 +23,6 @@
       background: url("../images/slider/bgIndex.jpg") center center no-repeat
       +retina-background-image("../images/slider/bgIndex@2x.jpg")
       background-size: cover
-
-    .imageCover
-      height: 500px
-
-      @media #{$below-1024}
-        height: 450px
-
-      @media #{$below-768}
-        height: 350px
 
   .quote
     width: 10%
