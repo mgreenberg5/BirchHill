@@ -1,11 +1,11 @@
 #Navigation
   background-color: $green
+  padding: 20px 0
 
   .row
     padding: 0
 
   #Logo
-    padding: 20px 0
     margin-bottom: 0
 
   #MoibleMenu
@@ -21,7 +21,7 @@
 
     .centerline
       height: 2px
-      background-color: $white
+      background-color: $tan
       width: 100%
       position: absolute
       top: 50%
@@ -33,7 +33,7 @@
       position: absolute
       top: 0
       height: 0
-      border-bottom: 2px solid $white
+      border-bottom: 2px solid $tan
       width: 100%
       left: 0
       right: 0
@@ -72,11 +72,14 @@
 
     ul
       text-align: right
+      line-height: 80px
 
     li
       display: inline
       padding: 0 30px
-      line-height: 80px
+
+      &:last-child
+        padding-right: 0
 
       @media #{$below-1024}
         padding: 0 20px
@@ -107,6 +110,11 @@
 
       @media #{$below-768}
         display: block
+        padding: 25px 20px
+
+      a
+        font-weight: $semiBold
+        font-size: 16px
 
 .hidden
   overflow-x: hidden

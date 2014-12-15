@@ -1,28 +1,37 @@
 #Index
 
-  .aSpot
-    height: 480px
+  .aSpot .sss
+    height: 500px
 
-    .sss
-      height: 480px
+    @media #{$below-1024}
+      height: 450px
+
+    @media #{$below-768}
+      height: 350px
 
     .image1
       background: url("../images/slider/bgIndex.jpg") center center no-repeat
       +retina-background-image("../images/slider/bgIndex@2x.jpg")
       background-size: cover
-      height: 480px
 
     .image2
       background: url("../images/slider/bgIndex.jpg") center center no-repeat
       +retina-background-image("../images/slider/bgIndex@2x.jpg")
       background-size: cover
-      height: 480px
 
     .image3
       background: url("../images/slider/bgIndex.jpg") center center no-repeat
       +retina-background-image("../images/slider/bgIndex@2x.jpg")
       background-size: cover
-      height: 480px
+
+    .imageCover
+      height: 500px
+
+      @media #{$below-1024}
+        height: 450px
+
+      @media #{$below-768}
+        height: 350px
 
   .quote
     width: 10%
