@@ -41,10 +41,21 @@
 
   .thumb
     float: left
-    width: 18%
+    width: 23%
     margin: 1%
     overflow: hidden
     cursor: pointer
+
+    @media #{$below-1024}
+      width: 31%
+
+    @media #{$below-768}
+      width: 48%
+
+    @media #{$below-480}
+      width: 100%
+      margin: 0 0 20px 0
+      text-align: center
 
     img
       display: block

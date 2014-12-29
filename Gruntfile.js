@@ -215,7 +215,7 @@ module.exports = function(grunt) {
     },
     watch: {
       options: {
-        npspawn: true,
+        spawn: false,
         livereload: true
       },
       styles: {
@@ -227,7 +227,7 @@ module.exports = function(grunt) {
         tasks: 'scripts'
       },
       markup: {
-        files: '**/*.jade',
+        files: 'src/src/**/*.jade',
         tasks: 'markup'
       },
       images: {
