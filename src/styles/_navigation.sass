@@ -101,9 +101,27 @@
       line-height: 16px
       letter-spacing: 0.05em
       text-transform: uppercase
+      position: relative
 
       @media #{$below-768}
         color: $green
+
+      &:after
+        transition: all .2s
+        position: absolute
+        bottom: 0
+        top: 30px
+        left: 0
+        right: 0
+        margin: auto
+        width: 0%
+        content: '.'
+        color: transparent
+        background: $tan
+        height: 1px
+
+      &:hover:after
+        width: 100%
 
     .mobileItem
       display: none
