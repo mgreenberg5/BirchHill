@@ -22,3 +22,67 @@
   background: url("../images/slider/bgImage5.jpg") center center no-repeat
   +retina-background-image("../images/slider/bgImage5@2x.jpg")
   background-size: cover
+
+.sss
+  height: 0
+  margin: 0
+  padding: 0
+  position: relative
+  display: block
+  overflow: hidden
+  background-color: white
+
+.ssslide
+  width: 100%
+  margin: 0
+  padding: 0
+  position: absolute
+  top: 0
+  left: 0
+  display: none
+  overflow: hidden
+  img
+    max-width: 100%
+    height: auto
+    margin: 0
+    padding: 0
+    position: relative
+    display: block
+
+.sssnext
+  width: 60px
+  height: 100%
+  margin: 0
+  position: absolute
+  top: 0
+  background: url('../../images/slider/arrow@2x.png') no-repeat
+  background-size: 120px 60px
+
+  @media #{$below-768}
+    width: 30px
+    background-size: 60px 30px
+
+.sssprev
+  width: 60px
+  height: 100%
+  margin: 0
+  position: absolute
+  top: 0
+  background: url('../../images/slider/arrow@2x.png') no-repeat
+  background-size: 120px 60px
+  left: 3%
+  background-position: 0 50%
+
+  @media #{$below-768}
+    width: 30px
+    background-size: 60px 30px
+
+.sssnext
+  right: 3%
+  background-position: -60px 50%
+
+  @media #{$below-768}
+    background-position: -30px 50%
+
+.sssprev:hover, .sssnext:hover
+  cursor: pointer
