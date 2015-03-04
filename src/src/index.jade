@@ -1,5 +1,6 @@
 include ../templates/document-head
 include ../templates/navigation
+include ../templates/slider
 include ../templates/footer
 
 doctype html
@@ -10,21 +11,18 @@ html(lang='en')
     .wrapper
       +navigation
       #Index
-        .aSpot.slider
-          .imageCover.image1
-          .imageCover.image2
-          .imageCover.image3
+        +slider
         .section.bgTan
           .container
             .row
               h2.center Testimonial
             .row
               .column.quote
-                img.right(alt="" src="../images/quoteStart.png")
+                img.right(alt="" src="../images/quoteStart@2x.png" width="30px" height="27px")
               .column.quoteText
-                h1 Lorem ipsum dolor sit amet, consectet adipiscing elit. In porttitor neque eu elit. Sed consequat ex eu finibus viverra.
+                h1 We’re very happy with how things turned out and we can’t wait to see things bloom and start to spread in the spring. I hope you have a warm winter, and we look forward to hearing from you in the spring.
               .column.quote
-                img(alt="" src="../images/quoteEnd.png")
+                img(alt="" src="../images/quoteEnd@2x.png" width="30px" height="27px")
         .section.bgBrown
           .container
             .row

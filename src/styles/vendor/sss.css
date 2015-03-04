@@ -29,12 +29,13 @@
 }
 
 .sssnext, .sssprev {
-  width: 25px;
+  width: 60px;
   height: 100%;
   margin: 0;
   position: absolute;
   top: 0;
-  background: url('../../images/slider/arr.png') no-repeat;
+  background: url('../../images/slider/arrow@2x.png') no-repeat;
+  background-size: 120px 60px;
 }
 
 .sssprev {
@@ -44,7 +45,7 @@
 
 .sssnext {
   right: 3%;
-  background-position: -26px 50%;
+  background-position: -60px 50%;
 }
 
 .sssprev:hover, .sssnext:hover {

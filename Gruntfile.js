@@ -227,7 +227,7 @@ module.exports = function(grunt) {
         tasks: 'scripts'
       },
       markup: {
-        files: 'src/src/**/*.jade',
+        files: 'src/**/*.jade',
         tasks: 'markup'
       },
       images: {
