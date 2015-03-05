@@ -32,10 +32,18 @@ $below-480 : "only screen and (max-width : 480px)"
   -moz-appearance: $appearance
   appearance: $appearance
 
+=transform($value)
+  -webkit-transform: $value
+  -moz-transform: $value
+  -ms-transform: $value
+  -o-transform: $value
+  transform: $value
+
 // LAYOUT
 // ==================================================
 body
   position: relative
+  background-color: $tan
 
 .wrapper
   width: 100%
@@ -58,6 +66,9 @@ body
     content: ""
     display: table
     clear: both
+
+  @media #{$below-768}
+    text-align: center
 
 .column
   float: left
@@ -150,6 +161,13 @@ body
 
 .spacer
   margin: 50px 0 0 0
+
+hr
+  width: 50%
+  border: 0
+  margin: 30px auto
+  height: 1px
+  background-color: $brown
 
 .bgTan
   background-color: $tan

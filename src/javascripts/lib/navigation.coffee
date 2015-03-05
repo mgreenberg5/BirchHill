@@ -1,39 +1,47 @@
-animationSpeed = 300
-menuOpen = false
-desktopWindowWidth = 768
+
+$(document).ready(() ->
+  navigationController = new NavigationController()
+  $("#MoibleMenu").on('click', navigationController.animateSideNav)
+  $(".bodyOverlay").on('click', navigationController.animateSideNav)
+)
 
 $(window).resize(() ->
-  if $(window).width() > desktopWindowWidth
-    menuOpen = true
-    animateSideNav()
+  navigationController = new NavigationController()
+  if $(window).width() > 768
+    navigationController._menuOpen = true
+    navigationController.animateSideNav()
 )
 
-$(document).on('click', "#MoibleMenu", () -> animateSideNav())
-$(document).on('click', ".bodyOverlay", () -> animateSideNav())
+class NavigationController
+  constructor: () ->
+    @_animationSpeed = 300
+    @_menuOpen = false
+    @_html = $("html")
+    @_body = $("body")
+    @_mobileMenu = $("#MoibleMenu")
+    @_bodyOverlay = $(".bodyOverlay")
 
-animateSideNav = (() ->
-  if menuOpen
-    bodyXPosition = '0'
-    $("html").removeClass('hidden')
-    $("body").removeClass('hidden')
-    $("#MoibleMenu").removeClass('active')
-    $(".bodyOverlay").css("display", "none")
-    menuOpen = false
-  else
-    bodyXPosition = '250px'
-    $("html").addClass('hidden')
-    $("body").addClass('hidden')
-    $("#MoibleMenu").addClass('active')
-    $(".bodyOverlay").css("display", "block")
-    menuOpen = true
+  animateSideNav: () =>
+    if @_menuOpen
+      bodyXPosition = '0'
+      @_html.removeClass('hidden')
+      @_body.removeClass('hidden')
+      @_mobileMenu.removeClass('active')
+      @_bodyOverlay.css("display", "none")
+      @_menuOpen = false
+    else
+      bodyXPosition = '250px'
+      @_html.addClass('hidden')
+      @_body.addClass('hidden')
+      @_mobileMenu.addClass('active')
+      @_bodyOverlay.css("display", "block")
+      @_menuOpen = true
 
-  $("body").stop().animate(
-    left: bodyXPosition
-    animationSpeed
-  )
+    $("body").stop().animate(
+      left: bodyXPosition
+      @_animationSpeed
+    )
 
-  $("#Nav").stop().animate(
-    left: menuXPosition
-    animationSpeed
-  )
-)
+    $("#Nav").stop().animate(
+      @_animationSpeed
+    )

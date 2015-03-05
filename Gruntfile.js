@@ -119,9 +119,9 @@ module.exports = function(grunt) {
       styles: {
         files: [{
           expand: true,
-          cwd: 'src/styles/vendor',
+          cwd: 'src/styles',
           src: ["**/*.css"],
-          dest: 'bin/css/vendor'
+          dest: 'bin/css'
         }]
       },
       javascripts: {
@@ -215,7 +215,7 @@ module.exports = function(grunt) {
     },
     watch: {
       options: {
-        npspawn: true,
+        spawn: false,
         livereload: true
       },
       styles: {
@@ -227,7 +227,7 @@ module.exports = function(grunt) {
         tasks: 'scripts'
       },
       markup: {
-        files: '**/*.jade',
+        files: 'src/**/*.jade',
         tasks: 'markup'
       },
       images: {

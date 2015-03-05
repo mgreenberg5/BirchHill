@@ -1,45 +1,93 @@
 include ../templates/document-head
 include ../templates/navigation
+include ../templates/slider
 include ../templates/footer
 
-body#Secondary
-  .wrapper
-    +navigation
-    #Services
-      .aSpot.slider
-        .imageCover.image1
-        .imageCover.image2
-        .imageCover.image3
-      .section.bgTan
-        .container
-          .row
-            .column.oneHalf
-              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat turpis ut nunc mattis laoreet. Cras venenatis sapien arcu, vel pellentesque mi tempus ut. Fusce mattis libero libero. Etiam viverra, orci at pellentesque imperdiet, ex odio blandit justo, in hendrerit lacus lacus vel velit. Phasellus iaculis efficitur porttitor. Curabitur congue urna eget nibh iaculis consequat. Proin purus mi, convallis non dapibus eu, tincidunt et nisi. Nulla magna dui, viverra non ligula nec, tristique tempor sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In fringilla justo vel sollicitudin interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            .column.oneHalf
-              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat turpis ut nunc mattis laoreet. Cras venenatis sapien arcu, vel pellentesque mi tempus ut. Fusce mattis libero libero. Etiam viverra, orci at pellentesque imperdiet, ex odio blandit justo, in hendrerit lacus lacus vel velit. Phasellus iaculis efficitur porttitor. Curabitur congue urna eget nibh iaculis consequat. Proin purus mi, convallis non dapibus eu, tincidunt et nisi. Nulla magna dui, viverra non ligula nec, tristique tempor sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In fringilla justo vel sollicitudin interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      .section.bgBrown
-        .container
-          .row
-            h1.center About
-          .row
-            .column.oneFourth
-              .center
-                img(src="../images/headshot.png")
-            .column.threeFourths
-              h3 Barry Greenberg
-              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat turpis ut nunc mattis laoreet. Cras venenatis sapien arcu, vel pellentesque mi tempus ut. Fusce mattis libero libero. Etiam viverra, orci at pellentesque imperdiet, ex odio blandit justo, in hendrerit lacus lacus vel velit. Phasellus iaculis efficitur porttitor. Curabitur congue urna eget nibh iaculis consequat. Proin purus mi, convallis non dapibus eu, tincidunt et nisi. Nulla magna dui, viverra non ligula nec, tristique tempor sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In fringilla justo vel sollicitudin interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          .row
-            .column.oneFourth
-              .center
-                img(src="../images/headshot.png")
-            .column.threeFourths
-              h3 Barry Greenberg
-              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat turpis ut nunc mattis laoreet. Cras venenatis sapien arcu, vel pellentesque mi tempus ut. Fusce mattis libero libero. Etiam viverra, orci at pellentesque imperdiet, ex odio blandit justo, in hendrerit lacus lacus vel velit. Phasellus iaculis efficitur porttitor. Curabitur congue urna eget nibh iaculis consequat. Proin purus mi, convallis non dapibus eu, tincidunt et nisi. Nulla magna dui, viverra non ligula nec, tristique tempor sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In fringilla justo vel sollicitudin interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          .row
-            .column.oneFourth
-              .center
-                img(src="../images/headshot.png")
-            .column.threeFourths
-              h3 Barry Greenberg
-              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat turpis ut nunc mattis laoreet. Cras venenatis sapien arcu, vel pellentesque mi tempus ut. Fusce mattis libero libero. Etiam viverra, orci at pellentesque imperdiet, ex odio blandit justo, in hendrerit lacus lacus vel velit. Phasellus iaculis efficitur porttitor. Curabitur congue urna eget nibh iaculis consequat. Proin purus mi, convallis non dapibus eu, tincidunt et nisi. Nulla magna dui, viverra non ligula nec, tristique tempor sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In fringilla justo vel sollicitudin interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    +footer
+doctype html
+html(lang='en')
+
+  +document-head
+  body#Secondary
+    .wrapper
+      +navigation
+      #Services
+        +slider
+        .section.bgTan
+          .container
+            .row
+              .column.oneHalf
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat turpis ut nunc mattis laoreet. Cras venenatis sapien arcu, vel pellentesque mi tempus ut. Fusce mattis libero libero. Etiam viverra, orci at pellentesque imperdiet, ex odio blandit justo, in hendrerit lacus lacus vel velit. Phasellus iaculis efficitur porttitor. Curabitur congue urna eget nibh iaculis consequat. Proin purus mi, convallis non dapibus eu, tincidunt et nisi. Nulla magna dui, viverra non ligula nec, tristique tempor sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In fringilla justo vel sollicitudin interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              .column.oneHalf
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat turpis ut nunc mattis laoreet. Cras venenatis sapien arcu, vel pellentesque mi tempus ut. Fusce mattis libero libero. Etiam viverra, orci at pellentesque imperdiet, ex odio blandit justo, in hendrerit lacus lacus vel velit. Phasellus iaculis efficitur porttitor. Curabitur congue urna eget nibh iaculis consequat. Proin purus mi, convallis non dapibus eu, tincidunt et nisi. Nulla magna dui, viverra non ligula nec, tristique tempor sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In fringilla justo vel sollicitudin interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        .section.bgBrown
+          .container
+            .row
+              h2.center What we do
+            .row
+              .column.oneFourth
+                .center
+                  img(alt="" src="../images/icon-paper@2x.png" width="150px" height="150px")
+              .column.threeFourths
+                h4 Landscape Design and Consulting
+                .row
+                  .column.oneHalf
+                    ul
+                      li Site Design Plans
+                      li Construction Plans
+                      li Planting Plans
+                  .column.oneHalf
+                    ul
+                      li Grading Plans
+                      li Permits and Variances
+            .row
+              .column.oneFourth
+                .center
+                  img(alt="" src="../images/icon-person@2x.png" width="150px" height="150px")
+              .column.threeFourths
+                h4 Landscape Construction
+                .row
+                  .column.oneHalf
+                    ul
+                      li Walkways &amp; Patios – Paver, brick and stone
+                      li Walls – Brick, Stone and Railroad Tie
+                      li Water Features and Ponds
+                      li Drainage Systems
+                  .column.oneHalf
+                    ul
+                      li Grading and Contouring
+                      li Custom Masonry
+                      li Irrigation Systems
+                      li Driveways – Asphalt, Concrete, Paver and Brick
+            .row
+              .column.oneFourth
+                .center
+                  img(alt="" src="../images/icon-tree@2x.png" width="150px" height="150px")
+              .column.threeFourths
+                h4 Landscape Planting
+                .row
+                  .column.oneHalf
+                    ul
+                      li Seeding and Sodding
+                      li Foundation Plantings
+                  .column.oneHalf
+                    ul
+                      li Screening Planting
+                      li Large Mature Trees
+            .row
+              .column.oneFourth
+                .center
+                  img(alt="" src="../images/icon-flower@2x.png" width="150px" height="150px")
+              .column.threeFourths
+                h4 Custom Landscape Maintenance
+                .row
+                  .column.oneHalf
+                    ul
+                      li Seasonal Planting – Annuals, bulbs and perennials
+                      li Tree Pruning
+                      li Shrub Pruning
+                  .column.oneHalf
+                    ul
+                      li Bed Maintenance and Mulching
+                      li Packages are tailored to individual client’s needs
+                      li We DO NOT offer Lawn Maintenance
+      +footer
