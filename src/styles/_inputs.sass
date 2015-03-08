@@ -1,56 +1,92 @@
-textarea, select, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"]
-  +box-sizing(border-box)
-  border: $brown 1px solid
-  display: block
-  font-family: $openSans
-  font-weight: $normal
-  font-size: 16px
-  height: 50px
-  line-height: 20px
-  padding: 0 10px
-  width: 100%
-  text-transform: uppercase
-  +appearance (none)
-
-textarea
-  padding: 10px
-  height: auto
-  line-height: 24px
-  text-transform: none
-  font-weight: $normal
-
-select
-  &:after
-    content: ""
-    width: 0
-    height: 0
-    border-left: 8px solid transparent
-    border-right: 8px solid transparent
-    border-top: 10px solid #86bcc2
-    position: absolute
-    float: right
-    top: 20px
-    right: 20px
-    pointer-events: none
-
 #D3cpWidget
-  width: 80%
+  width: 100%
+  font-family: $openSans
   margin: 0 auto
   font-weight: $normal
   font-size: 16px
   line-height: 28px
-  margin-bottom: 15px
+  margin-bottom: 0
 
   @media #{$below-480}
-    width: 100%
     font-size: 14px
     line-height: 24px
     margin-bottom: 10px
 
+  hr
+    width: 100%
+    border: 0
+    margin: 30px auto !important
+    height: 1px
+    background-color: $brown
+
+.d3cp_form
+  textarea, select, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"]
+    +box-sizing(border-box)
+    border: $brown 1px solid
+    display: block
+    font-family: $openSans
+    font-weight: $normal
+    font-size: 16px
+    height: 50px
+    line-height: 20px
+    padding: 0 10px
+    width: 100%
+    text-transform: uppercase
+    +appearance (none)
+
+  textarea
+    padding: 10px
+    height: 200px
+    line-height: 24px
+    text-transform: none
+    font-weight: $normal
+
+  select
+    &:after
+      content: ""
+      width: 0
+      height: 0
+      border-left: 8px solid transparent
+      border-right: 8px solid transparent
+      border-top: 10px solid #86bcc2
+      position: absolute
+      float: right
+      top: 20px
+      right: 20px
+      pointer-events: none
+
+  input[type="text"]:focus, textarea:focus
+    +border-radius(0)
+    background-color: $white
+    border-color: $brown
+    padding: 0 10px
+
+  textarea:focus
+    padding: 10px
+
+.d3cp_input_wrap
+  padding: 0
+  margin: 0
+  width: 100%
+
+.d3cp_select_timeofday
+  width: 100%
+
 .d3cp_des
-  text-align: center
+  font-weight: $light
+  font-size: 23px
+  line-height: 34px
+  letter-spacing: 0.05em
+  margin-bottom: 15px
+  color: $green
+
+  @media #{$below-480}
+    font-size: 16px
+    line-height: 23px
+    margin-bottom: 10px
 
 .d3cp_form_title
+  padding: 0
   color: $green
   text-transform: uppercase
   font-weight: $bold
@@ -62,6 +98,7 @@ select
 .d3cp_input_outer
   width: 32%
   margin: 0 1% 0 0
+  padding: 0
   float: left
 
   @media #{$below-768}
@@ -84,9 +121,24 @@ select
   font-size: 14px
   font-style: italic
   margin-top: 15px
+  padding: 0
 
-.d3cp_form_exp.d3cp_marked
-  color: red
+.d3cp_scheduler_wrap
+  display: block
 
-.d3cp_button_submit
-  background: url(//www.demandforce.com/widget/css/images/d3cp_button_submit_mid.png) no-repeat scroll 0 0 transparent
+.d3cp_input_date
+  background-position:  95% 50%
+
+.d3cp_captcha_wrap
+  padding: 0
+  margin: 0
+
+.d3cp_captcha_change
+  margin: 0
+
+.d3cp_form_row.d3cp_form_single
+  padding: 0
+  margin: 20px 0 0 0
+
+.d3cp_df_seal_widget
+  display: none
