@@ -5,22 +5,20 @@ include ../templates/footer
 
 doctype html
 html(lang='en')
-
   +document-head
   body#Secondary
     .wrapper
       +navigation
       #Contact
-        +slider
         .section.bgTan
           .container
             .row
               h2.center Schedule an Appointment
               hr
               h3 After 30 years of creating livable landscapes, we are still excited to forge new relationships with potential clients.  Please contact us to discuss how we can review your property and tailor a design that meets both your desires and your budget.
-              h3 Fill out the form below to schedule an appointment.
             .row.demandforced
               script.
-                d3cp_bid = '108001979';
+                d3cp_bid = '108001979'
               script(src="https://www.demandforced3.com/b/birchhilllandscaping/scheduler.widget" type="text/javascript")
+              script(src="https://www.demandforced3.com/b/birchhilllandscaping/reviews.widget" type="text/javascript")
       +footer

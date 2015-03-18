@@ -20,9 +20,19 @@
     background-color: $brown
 
 .d3cp_form
+  background: $brown
+  padding: 10px 30px
+  border: $darkBrown 1px solid
+
+  @media #{$below-768}
+    padding: 10px 10px
+
+  hr
+    background-color: $darkBrown !important
+
   textarea, select, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"]
     +box-sizing(border-box)
-    border: $brown 1px solid
+    border: $darkBrown 1px solid
     display: block
     font-family: $openSans
     font-weight: $normal
@@ -58,7 +68,7 @@
   input[type="text"]:focus, textarea:focus, select:focus
     +border-radius(0)
     background-color: $white
-    border-color: $brown
+    border-color: $darkBrown
     padding: 0 10px
 
   textarea:focus
@@ -74,8 +84,8 @@
 
 .d3cp_des
   font-weight: $light
-  font-size: 23px
-  line-height: 34px
+  font-size: 20px
+  line-height: 30px
   letter-spacing: 0.05em
   margin-bottom: 15px
   color: $green
@@ -92,7 +102,7 @@
   font-weight: $bold
   font-size: 16px
   line-height: 28px
-  margin: 30px 0 10px 0
+  margin: 20px 0 10px 0
   width: 100%
 
 .d3cp_marked
@@ -111,6 +121,7 @@
 
 .d3cp_form_row
   display: block
+  margin-bottom: 0
 
   &:after
     margin: 0
@@ -119,11 +130,12 @@
     clear: both
 
 .d3cp_form_exp
+  color: $green
   display: block
-  line-height: 18px
-  font-size: 14px
+  line-height: 14px
+  font-size: 12px
   font-style: italic
-  margin-top: 15px
+  margin-top: 5px
   padding: 0
 
 .d3cp_scheduler_wrap
@@ -145,3 +157,95 @@
 
 .d3cp_df_seal_widget
   display: none
+
+.d3cp_button_submit
+  background: url("../images/button-submit.jpg") no-repeat scroll 0 0 transparent
+  width: 250px
+  height: 50px
+
+// REVIEWS
+// ==================================================
+.d3cp_feature_wrap
+  border-top: 1px solid $brown
+  background: none
+  width: 100%
+  padding: 0
+  margin-top: 50px
+
+.d3cp_review_order
+  padding: 0 0 20px 0
+
+.d3cp_button_request
+  display: none
+
+.d3cp_review_box
+  margin: 0
+
+.d3cp_review_date
+  padding: 0
+
+.d3cp_star_rating_wrap
+  margin-top: 8px
+
+.d3cp_review_order
+  background: none
+  margin: 0
+
+.d3cp_review_seal_wrap
+  display: none
+
+.d3cp_review_pic
+  float: none
+
+.d3cp_review_main
+  width: 100%
+  margin-left: 0
+  float: none
+
+.d3cp_feature_wrap .d3cp_review_box
+  width: 65%
+
+  @media #{$below-768}
+    width: 100%
+    float: none
+
+.d3cp_feature_wrap .d3cp_review_main
+  width: 100%
+
+.d3cp_feature_wrap .d3cp_review_date
+  float: none
+
+.d3cp_feature_wrap .d3cp_review_content
+  padding-right: 0
+
+.d3cp_review_date
+  background-image: none
+
+.d3cp_review_name
+  padding: 0
+
+.d3cp_review_content
+  font-weight: $normal
+  font-size: 14px
+  line-height: 24px
+  margin: 15px 0
+  padding: 0
+
+  @media #{$below-480}
+    font-size: 12px
+    line-height: 20px
+    margin-bottom: 10px
+
+.d3cp_review_bizcomment
+  padding-left: 20px
+  border-color: $darkGreen
+
+.bordertop
+  margin-top: 95px
+
+  @media #{$below-768}
+    margin-top: 20px
+
+.d3cp_itemized_box
+  @media #{$below-768}
+    float: none
