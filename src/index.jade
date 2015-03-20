@@ -1,15 +1,15 @@
-include ../templates/document-head
-include ../templates/navigation
-include ../templates/slider
-include ../templates/footer
+include templates/document-head
+include templates/navigation
+include templates/slider
+include templates/footer
 
 doctype html
 html(lang='en')
 
-  +document-head
+  +document-head("")
   body
     .wrapper
-      +navigation
+      +navigation("")
       #Index
         +slider
         .section.bgTan

@@ -1,4 +1,4 @@
-mixin document-head
+mixin document-head(pathPrefix)
   head
 
     // Basic Page Needs
@@ -21,13 +21,13 @@ mixin document-head
     // ==================================================
     link(type="text/css" rel="stylesheet" href="https://www.demandforced3.com/b/1/css/website.css")
     link(type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300")
-    link(type="text/css" rel="stylesheet" href="../css/main.css")
+    link(type="text/css" rel="stylesheet" href=pathPrefix + "css/main.css")
 
     // Scripts
     // ==================================================
-    script(src="../javascripts/vendor/jquery-1.11.1.min.js")
-    script(src="../javascripts/vendor/sss.js")
-    script(src="../javascripts/main.min.js")
+    script(src=pathPrefix + "javascripts/vendor/jquery-1.11.1.min.js")
+    script(src=pathPrefix + "javascripts/vendor/sss.js")
+    script(src=pathPrefix + "javascripts/main.min.js")
 
     // Favicons
     // ==================================================

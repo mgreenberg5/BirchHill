@@ -6,10 +6,10 @@ include ../templates/footer
 doctype html
 html(lang='en')
 
-  +document-head
+  +document-head("../")
   body#Secondary
     .wrapper
-      +navigation
+      +navigation("../")
       #About
         +slider
         .section.bgTan
