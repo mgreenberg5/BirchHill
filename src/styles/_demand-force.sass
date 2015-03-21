@@ -130,13 +130,20 @@
     clear: both
 
 .d3cp_form_exp
-  color: $green
+  color: $darkGray
   display: block
   line-height: 14px
   font-size: 12px
   font-style: italic
   margin-top: 5px
   padding: 0
+
+.d3cp_form_exp.d3cp_marked:before
+  margin: 0
+  height: 10px
+  content: ""
+  display: table
+  clear: both
 
 .d3cp_scheduler_wrap
   display: block
@@ -195,7 +202,10 @@
   display: none
 
 .d3cp_review_pic
-  float: none
+  display: none
+
+.d3cp_review_date, .d3cp_review_period
+  font-size: 13px
 
 .d3cp_review_main
   width: 100%
@@ -226,14 +236,14 @@
 
 .d3cp_review_content
   font-weight: $normal
-  font-size: 14px
-  line-height: 24px
+  font-size: 16px
+  line-height: 28px
   margin: 15px 0
   padding: 0
 
   @media #{$below-480}
-    font-size: 12px
-    line-height: 20px
+    font-size: 14px
+    line-height: 24px
     margin-bottom: 10px
 
 .d3cp_review_bizcomment
@@ -249,3 +259,41 @@
 .d3cp_itemized_box
   @media #{$below-768}
     float: none
+
+.d3cp_confirmation
+  margin: 0
+
+.d3cp_des.d3cp_des_result, .d3cp_des_row_title, .d3cp_des_row_detail
+  color: $darkGray
+  font-weight: $normal
+  font-size: 16px
+  line-height: 28px
+  margin-bottom: 15px
+
+  @media #{$below-480}
+    font-size: 14px
+    line-height: 24px
+    margin-bottom: 10px
+
+.d3cp_des_row_title
+  color: $green
+  font-weight: $bold
+  padding: 0
+  width: 35%
+  margin-right: 0
+
+  @media #{$below-768}
+    width: 100%
+
+.d3cp_des_row_detail
+  width: 65%
+  padding-right: 0
+
+  @media #{$below-768}
+    width: 100%
+
+.d3cp_des_result_row
+  width: 50%
+
+  @media #{$below-768}
+    width: 100%
