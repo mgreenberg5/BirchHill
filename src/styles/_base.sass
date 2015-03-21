@@ -39,6 +39,13 @@ $below-480 : "only screen and (max-width : 480px)"
   -o-transform: $value
   transform: $value
 
+=transform-origin($value)
+  -webkit-transform-origin: $value
+  -moz-transform-origin: $value
+  -ms-transform-origin: $value
+  -o-transform-origin: $value
+  transform-origin: $value
+
 // LAYOUT
 // ==================================================
 body
@@ -50,25 +57,33 @@ body
   margin: 0
   padding: 0
 
+.section
+  padding: 80px 0 20px 0
+
+  @media #{$below-768}
+    padding: 60px 0 20px 0
+
 .container
   max-width: 1240px
   margin: 0 auto
   padding: 0 20px
 
-.section
-  padding: 80px 0 20px 0
+  >.row
+    padding-bottom: 60px
 
-.row
-  padding-bottom: 60px
+    @media #{$below-768}
+      padding-bottom: 40px
 
-  &:after
-    margin: 0
-    content: ""
-    display: table
-    clear: both
+.row:after
+  margin: 0
+  content: ""
+  display: table
+  clear: both
 
-  @media #{$below-768}
-    text-align: center
+.row-nested
+  .column
+    @media #{$below-768}
+      margin-bottom: 0 !important
 
 .column
   float: left

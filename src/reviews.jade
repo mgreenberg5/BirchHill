@@ -1,0 +1,20 @@
+include templates/document-head
+include templates/navigation
+include templates/footer
+
+doctype html
+html(lang='en')
+  +document-head("")
+  body#Secondary
+    .wrapper
+      +navigation("")
+      #Contact
+        .section.bgTan
+          .container
+            .row
+              h2.center Reviews
+              .demandforced
+                script.
+                  d3cp_bid = '108001979'
+                script(src="https://www.demandforced3.com/b/birchhilllandscaping/reviews.widget" type="text/javascript")
+      +footer

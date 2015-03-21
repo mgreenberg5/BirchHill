@@ -1,0 +1,91 @@
+include templates/document-head
+include templates/navigation
+include templates/slider
+include templates/footer
+
+doctype html
+html(lang='en')
+
+  +document-head("")
+  body#Secondary
+    .wrapper
+      +navigation("")
+      #Services
+        +slider
+        .section.bgTan
+          .container
+            .row
+              h3 <strong>Birch Hill Landscaping</strong> provides services tailored specifically to each client. These services include Landscape Design and Consulting, Landscape Construction, Landscape Planting, and Custom Landscape Maintenance. We can provide any or all of these services to meet your needs.
+        .section.bgBrown
+          .container
+            .row
+              h2.center Services
+            .row
+              .column.oneFourth
+                .center
+                  img(alt="" src="images/icon-paper@2x.png" width="150px" height="150px")
+              .column.threeFourths
+                h4 Landscape Design and Consulting
+                .row-nested
+                  .column.oneHalf
+                    ul
+                      li Site Development Plans
+                      li Planting Plans
+                  .column.oneHalf
+                    ul
+                      li Grading and Drainage Plans
+                      li Permits and Variances
+            .row
+              .column.oneFourth
+                .center
+                  img(alt="" src="images/icon-person@2x.png" width="150px" height="150px")
+              .column.threeFourths
+                h4 Landscape Construction
+                .row-nested
+                  .column.oneHalf
+                    ul
+                      li Patios
+                      li Decks
+                      li Walkways
+                      li Stairs and Landings
+                      li Driveways
+                  .column.oneHalf
+                    ul
+                      li Walls: decorative and retaining
+                      li Ponds and Water Features
+                      li Sprinkler Systems
+                      li Landscape Lighting
+                      li Arbors and Trellises
+            .row
+              .column.oneFourth
+                .center
+                  img(alt="" src="images/icon-tree@2x.png" width="150px" height="150px")
+              .column.threeFourths
+                h4 Landscape Planting
+                .row-nested
+                  .column.oneHalf
+                    ul
+                      li Privacy Screening
+                      li Mature Tree Planting
+                      li Foundation Planting
+                  .column.oneHalf
+                    ul
+                      li Perennial Gardens
+                      li Seed and Sod Lawns
+            .row
+              .column.oneFourth
+                .center
+                  img(alt="" src="images/icon-flower@2x.png" width="150px" height="150px")
+              .column.threeFourths
+                h4 Custom Landscape Maintenance
+                .row-nested
+                  .column.oneHalf
+                    ul
+                      li Hand Pruning of trees and shrubs
+                      li Bed Maintenance including Edging
+                      li Mulching and Weed Control
+                  .column.oneHalf
+                    ul
+                      li Deep Root Shrub and Tree Fertilization
+                      li Lawn Chemical Application Programs
+      +footer
