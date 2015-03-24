@@ -1,6 +1,6 @@
 #Footer
   background-color: $green
-  padding: 20px 0
+  padding: 25px 0
 
   @media #{$below-768}
     padding: 40px 0
@@ -10,17 +10,19 @@
 
   ul
     margin-bottom: 0
+    line-height: 50px
 
   li
-    border-right: 2px solid $tan
+    border-right: 1px solid $tan
     display: inline-block
-    padding: 0 25px
+    padding: 0 15px
     margin-bottom: 0
     color: $tan
     text-decoration: none
     font-family: $openSans
     font-weight: $light
-    font-size: 14px
+    font-size: 13px
+    line-height: 35px
     letter-spacing: 0.05em
 
     &:first-child
@@ -28,8 +30,10 @@
 
     &:last-child
       border-right: none
+      padding-right: 0
 
     @media #{$below-768}
+      line-height: 30px
       border-right: none
       padding: 0
       display: block
@@ -38,3 +42,16 @@
   a
     text-decoration: none
     color: $tan
+
+.social-media
+  @media #{$below-768}
+    margin-top: 10px
+
+  a
+    display: inline-block
+
+  img
+    vertical-align: bottom
+    padding-right: 15px
+
+

@@ -93,6 +93,7 @@ module.exports = function(grunt) {
           "bin/images/**/*.jpg",
           "bin/images/**/*.gif",
           "bin/images/**/*.svg",
+          "bin/images/**/*.ico",
           "bin/pdfs/*.pdf",
           "bin/css/**/*.css",
           "bin/**/*.html"
@@ -104,7 +105,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'src/images',
-          src: ["**/*.png", "**/*.jpg"],
+          src: ["**/*.png", "**/*.jpg", "**/*.ico"],
           dest: 'bin/images'
         }]
       },
@@ -231,7 +232,7 @@ module.exports = function(grunt) {
         tasks: 'markup'
       },
       images: {
-        files: ['src/images/**/*.jpg', 'src/images/**/*.png'],
+        files: ['src/images/**/*.jpg', 'src/images/**/*.png', 'src/images/**/*.ico'],
         tasks: ['clean', 'copy']
       },
       pdfs: {

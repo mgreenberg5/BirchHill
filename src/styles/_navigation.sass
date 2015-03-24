@@ -88,11 +88,12 @@
         display: block
         line-height: 20px
         text-align: left
-        padding: 20px
+        padding: 0
         background: $tan
         border-bottom: $brown 1px solid
 
     a
+      display: block
       color: $tan
       text-decoration: none
       font-family: $openSans
@@ -105,6 +106,7 @@
 
       @media #{$below-768}
         color: $green
+        padding: 20px
 
       &:after
         transition: all .2s
@@ -128,7 +130,7 @@
 
       @media #{$below-768}
         display: block
-        padding: 25px 20px
+        padding: 5px 0
 
       a
         font-weight: $semiBold
