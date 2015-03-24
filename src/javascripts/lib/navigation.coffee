@@ -2,7 +2,7 @@
 $(document).ready(() ->
   navigationController = new NavigationController()
   $("#MoibleMenu").on('click', navigationController.animateSideNav)
-  $(".bodyOverlay").on('click', navigationController.animateSideNav)
+  $(".bodyOverlay").bind('touchstart click', navigationController.animateSideNav)
 )
 
 $(window).resize(() ->
