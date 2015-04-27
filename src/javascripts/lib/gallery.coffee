@@ -22,7 +22,7 @@ class Gallery
   _galleryScripts = ->
     galleryLength = $(".thumb").length
     galleryCounter = undefined
-    $(".thumb").click ->
+    $(".thumb").on('click', () ->
       $("#EnlargedImage").fadeIn()
 
       if $(window).width() < 480
@@ -36,6 +36,7 @@ class Gallery
 
       galleryCounter = $(this).index()
       $(".galleryCounter").html galleryCounter + " / " + $(".thumb").length
+    )
 
     $(".galleryNext").on('click', () ->
       if galleryCounter < galleryLength
