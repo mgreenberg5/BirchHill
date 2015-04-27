@@ -19,7 +19,7 @@ class Gallery
     _galleryScripts()
 
 
-  _galleryScripts =  ->
+  _galleryScripts = ->
     galleryLength = $(".thumb").length
     galleryCounter = undefined
     $(".thumb").click ->
@@ -37,19 +37,23 @@ class Gallery
       galleryCounter = $(this).index()
       $(".galleryCounter").html galleryCounter + " / " + $(".thumb").length
 
-    $(".galleryNext").click ->
+    $(".galleryNext").on('click', () ->
       if galleryCounter < galleryLength
         galleryCounter += 1
       else
         galleryCounter = 1
       $(".thumb:eq(" + (galleryCounter - 1) + ")").trigger "click"
+    )
 
-    $(".galleryPrev").click ->
+    $(".galleryPrev").on('click', () ->
       if galleryCounter <= galleryLength and galleryCounter > 1
         galleryCounter -= 1
       else
         galleryCounter = galleryLength
       $(".thumb:eq(" + (galleryCounter - 1) + ")").trigger "click"
+    )
 
-    $(".galleryClose").click ->
+    $(".galleryClose").on('click', () ->
       $("#EnlargedImage").fadeOut()
+    )
+
