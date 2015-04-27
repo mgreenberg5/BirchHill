@@ -2,17 +2,16 @@ galleryScripts = ->
   galleryLength = $(".thumb").length
   galleryCounter = undefined
   $(".thumb").click ->
-    console.log $(".thumb")
     $("#EnlargedImage").fadeIn()
 
     if $(window).width() < 480
-      $("#EnlargedImage").css "background-image": "url(" + $(this).data("largeimg") + ("_480x853") + (".jpg") + ")"
+      $("#EnlargedImage").css "background-image": "url(" + $(this).data("largeimg") + (".jpg") + ")"
     else if $(window).width() < 768
-      $("#EnlargedImage").css "background-image": "url(" + $(this).data("largeimg") + ("_768x480") + (".jpg") + ")"
+      $("#EnlargedImage").css "background-image": "url(" + $(this).data("largeimg") + (".jpg") + ")"
     else if $(window).width() < 1024
-      $("#EnlargedImage").css "background-image": "url(" + $(this).data("largeimg") + ("_1024x640") + (".jpg") + ")"
+      $("#EnlargedImage").css "background-image": "url(" + $(this).data("largeimg") + (".jpg") + ")"
     else
-      $("#EnlargedImage").css "background-image": "url(" + $(this).data("largeimg") + ("_1440x900") + (".jpg") + ")"
+      $("#EnlargedImage").css "background-image": "url(" + $(this).data("largeimg") + (".jpg") + ")"
 
     galleryCounter = $(this).index()
     $(".galleryCounter").html galleryCounter + " / " + $(".thumb").length

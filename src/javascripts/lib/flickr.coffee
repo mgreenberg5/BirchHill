@@ -11,8 +11,9 @@ class FlickrLoader
 
     $.each(data.photos.photo, (i, photo) ->
       photoHTML +=
-        '<div data-largeimg="https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '_o" class="thumb">
+        '<div data-largeimg="https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '_b" class="thumb">
           <img src="https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '_m.jpg">
         </div>'
     )
     $('#Photos').append(photoHTML)
+    galleryScripts()

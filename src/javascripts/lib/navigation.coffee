@@ -1,4 +1,3 @@
-
 $(document).ready(() ->
   navigationController = new NavigationController()
   $("#MoibleMenu").on('click', navigationController.animateSideNav)
