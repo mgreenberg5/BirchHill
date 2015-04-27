@@ -16,7 +16,7 @@ class Gallery
 
       $.each(data.photos.photo, (i, photo) =>
         galleryHTML +=
-          '<div data-largeimg="https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '" class="thumb">
+          '<div data-img="https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '" class="thumb">
             <img src="https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '_m.jpg">
           </div>'
       )
@@ -28,40 +28,41 @@ class Gallery
     galleryCounter = undefined
     $(".thumb").on('click', (e) =>
       currentTarget = $(e.currentTarget)
-      currentTargetDataLargeImg= $(e.currentTarget).data('largeimg')
+      currentTargetDataImg= $(e.currentTarget).data('img')
       $("#EnlargedImage").fadeIn()
 
       if $(window).width() < 480
-        $("#EnlargedImage").css "background-image": "url(" + currentTargetDataLargeImg + '.jpg' + ")"
+        $("#EnlargedImage").css "background-image": "url(" + currentTargetDataImg + '.jpg' + ")"
       else if $(window).width() < 768
-        $("#EnlargedImage").css "background-image": "url(" + currentTargetDataLargeImg + '_z.jpg' + ")"
+        $("#EnlargedImage").css "background-image": "url(" + currentTargetDataImg + '_z.jpg' + ")"
       else if $(window).width() < 1024
-        $("#EnlargedImage").css "background-image": "url(" + currentTargetDataLargeImg + '_c.jpg' + ")"
+        $("#EnlargedImage").css "background-image": "url(" + currentTargetDataImg + '_c.jpg' + ")"
       else
-        $("#EnlargedImage").css "background-image": "url(" + currentTargetDataLargeImg + '_b.jpg' + ")"
+        $("#EnlargedImage").css "background-image": "url(" + currentTargetDataImg + '_b.jpg' + ")"
 
       galleryCounter = currentTarget.index()
       $(".galleryCounter").html galleryCounter + " / " + $(".thumb").length
 
-      $(".galleryNext").on('click', () ->
-        if galleryCounter < galleryLength
-          galleryCounter += 1
-        else
-          galleryCounter = 1
-        $(".thumb:eq(" + (galleryCounter - 1) + ")").trigger "click"
-      )
-
-      $(".galleryPrev").on('click', () ->
-        if galleryCounter <= galleryLength and galleryCounter > 1
-          galleryCounter -= 1
-        else
-          galleryCounter = galleryLength
-        $(".thumb:eq(" + (galleryCounter - 1) + ")").trigger "click"
-      )
-
-      $(".galleryClose").on('click', () ->
-        $("#EnlargedImage").fadeOut()
-      )
+      @_bindEventHandlers()
     )
 
   _bindEventHandlers: () ->
+    $(".galleryNext").on('click', () ->
+      if galleryCounter < galleryLength
+        galleryCounter += 1
+      else
+        galleryCounter = 1
+      $(".thumb:eq(" + (galleryCounter - 1) + ")").trigger "click"
+    )
+
+    $(".galleryPrev").on('click', () ->
+      if galleryCounter <= galleryLength and galleryCounter > 1
+        galleryCounter -= 1
+      else
+        galleryCounter = galleryLength
+      $(".thumb:eq(" + (galleryCounter - 1) + ")").trigger "click"
+    )
+
+    $(".galleryClose").on('click', () ->
+      $("#EnlargedImage").fadeOut()
+    )
