@@ -3,10 +3,8 @@ $(document).ready(() ->
 )
 
 class Gallery
-
   constructor: () ->
     @_flickerHttpRequest()
-
 
   _flickerHttpRequest: () =>
     flickerAPI = 'https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=aaaa62bf4a58fb3d6cd45ab19ba43d0e&user_id=131046614%40N07&format=json&nojsoncallback=1&auth_token=72157652204662802-17e052f0a3c1343d&api_sig=4e5528c48d4ed65192fe54fff0b5f350'
@@ -21,9 +19,9 @@ class Gallery
           </div>'
       )
       $('#Photos').append(galleryHTML)
-      @_loadImages()
+      @_bindEventHandler()
 
-  _loadImages: () =>
+  _bindEventHandler: () =>
     galleryLength = $(".thumb").length
     galleryCounter = undefined
 
@@ -44,9 +42,7 @@ class Gallery
       galleryCounter = currentTarget.index()
       $(".galleryCounter").html galleryCounter + " / " + $(".thumb").length
     )
-
     $(".galleryNext").on('click', () =>
-      console.log "next"
       if galleryCounter < galleryLength
         galleryCounter += 1
       else
@@ -55,7 +51,6 @@ class Gallery
     )
 
     $(".galleryPrev").on('click', () =>
-      console.log "prev"
       if galleryCounter <= galleryLength and galleryCounter > 1
         galleryCounter -= 1
       else
@@ -64,10 +59,5 @@ class Gallery
     )
 
     $(".galleryClose").on('click', () ->
-      console.log "close"
       $("#EnlargedImage").fadeOut()
     )
-      # @_bindEventHandlers()
-
-
-  _bindEventHandlers: () =>

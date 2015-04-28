@@ -1,5 +1,5 @@
 $(document).ready(() ->
-  navigationController = new NavigationController()
+  # getNavigationController = () => navigationController ?= new NavigationController()
   $("#MoibleMenu").on('click', navigationController.animateSideNav)
   $(".bodyOverlay").bind('touchstart click', navigationController.animateSideNav)
 )
