@@ -26,9 +26,10 @@ class Gallery
   _loadImages: () =>
     galleryLength = $(".thumb").length
     galleryCounter = undefined
+
     $(".thumb").on('click', (e) =>
       currentTarget = $(e.currentTarget)
-      currentTargetDataImg= $(e.currentTarget).data('img')
+      currentTargetDataImg = $(e.currentTarget).data('img')
       $("#EnlargedImage").fadeIn()
 
       if $(window).width() < 480
@@ -42,12 +43,10 @@ class Gallery
 
       galleryCounter = currentTarget.index()
       $(".galleryCounter").html galleryCounter + " / " + $(".thumb").length
-
-      @_bindEventHandlers()
     )
 
-  _bindEventHandlers: () ->
-    $(".galleryNext").on('click', () ->
+    $(".galleryNext").on('click', () =>
+      console.log "next"
       if galleryCounter < galleryLength
         galleryCounter += 1
       else
@@ -55,7 +54,8 @@ class Gallery
       $(".thumb:eq(" + (galleryCounter - 1) + ")").trigger "click"
     )
 
-    $(".galleryPrev").on('click', () ->
+    $(".galleryPrev").on('click', () =>
+      console.log "prev"
       if galleryCounter <= galleryLength and galleryCounter > 1
         galleryCounter -= 1
       else
@@ -64,5 +64,10 @@ class Gallery
     )
 
     $(".galleryClose").on('click', () ->
+      console.log "close"
       $("#EnlargedImage").fadeOut()
     )
+      # @_bindEventHandlers()
+
+
+  _bindEventHandlers: () =>
