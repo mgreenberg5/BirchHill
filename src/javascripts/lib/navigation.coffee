@@ -1,14 +1,16 @@
+navigationController = null
+
+getNavigationController = () -> navigationController ?= new NavigationController()
+
 $(document).ready(() ->
-  # getNavigationController = () => navigationController ?= new NavigationController()
-  $("#MoibleMenu").on('click', navigationController.animateSideNav)
-  $(".bodyOverlay").bind('touchstart click', navigationController.animateSideNav)
+  $("#MoibleMenu").on('click', getNavigationController().animateSideNav)
+  $(".bodyOverlay").bind('touchstart click', getNavigationController().animateSideNav)
 )
 
 $(window).resize(() ->
-  navigationController = new NavigationController()
   if $(window).width() > 768
-    navigationController._menuOpen = true
-    navigationController.animateSideNav()
+    getNavigationController()._menuOpen = true
+    getNavigationController().animateSideNav()
 )
 
 class NavigationController
