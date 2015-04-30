@@ -1,5 +1,9 @@
+gallery = null
+
+getGallery = () -> gallery ?= new Gallery()
+
 $(document).ready(() ->
-  gallery = new Gallery()
+  getGallery()
 )
 
 class Gallery
