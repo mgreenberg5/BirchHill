@@ -11,10 +11,10 @@ class Gallery
     @_flickerHttpRequestGallery()
     @_flickerHttpRequestFeaturedWork()
 
-  _flickerHttpRequestGallery: () ->
+  _flickerHttpRequestGallery: () =>
     flickerAPI = 'https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=75ef266514506ad0786961e0999b064e&user_id=131046614%40N07&format=json&nojsoncallback=1'
 
-    $.getJSON(flickerAPI, (data) ->
+    $.getJSON(flickerAPI, (data) =>
       galleryHTML = ''
 
       $.each(data.photos.photo, (i, photo) ->
