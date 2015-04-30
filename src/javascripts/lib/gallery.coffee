@@ -7,7 +7,7 @@ class Gallery
     @_flickerHttpRequest()
 
   _flickerHttpRequest: () =>
-    flickerAPI = 'https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=9bc88c4ac20a3658d52d7076a7c6ebd9&user_id=131046614%40N07&format=json&nojsoncallback=1'
+    flickerAPI = 'https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=75ef266514506ad0786961e0999b064e&user_id=131046614%40N07&format=json&nojsoncallback=1'
 
     $.getJSON flickerAPI, (data) =>
       galleryHTML = ''
