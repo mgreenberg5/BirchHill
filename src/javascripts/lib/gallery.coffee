@@ -14,18 +14,19 @@ class Gallery
   _flickerHttpRequestGallery: () ->
     flickerAPI = 'https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=75ef266514506ad0786961e0999b064e&user_id=131046614%40N07&format=json&nojsoncallback=1'
 
-    $.getJSON flickerAPI, (data) ->
+    $.getJSON(flickerAPI, (data) ->
       galleryHTML = ''
 
       $.each(data.photos.photo, (i, photo) ->
         galleryHTML += '<div class="thumb" style="background-image:url(https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '_m.jpg)" data-img="https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '"></div>')
       $('#Photos').append(galleryHTML)
       @_bindEventHandler()
+    )
 
   _flickerHttpRequestFeaturedWork: () ->
     flickerAPI = 'https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=f0fcf8e2c366a04e2caa68f4b482021b&user_id=131046614%40N07&per_page=4&page=1&format=json&nojsoncallback=1'
 
-    $.getJSON flickerAPI, (data) ->
+    $.getJSON(flickerAPI, (data) ->
       featuredWorkHTML = ''
 
       $.each(data.photos.photo, (i, photo) ->
@@ -36,6 +37,7 @@ class Gallery
         featuredWorkHTML += '</div>'
       )
       $('#FeaturedWork').append(featuredWorkHTML)
+    )
 
   _bindEventHandler: () ->
     galleryLength = $('.thumb').length
