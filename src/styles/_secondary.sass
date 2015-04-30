@@ -25,33 +25,30 @@
   .thumb
     float: left
     width: 23%
+    height: 200px
     margin: 1%
     overflow: hidden
     cursor: pointer
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    background-size: cover
+    transition: all ease .5s
 
     @media #{$below-1024}
       width: 31%
 
     @media #{$below-768}
+      height: 225px
       width: 48%
 
     @media #{$below-480}
+      height: 250px
       width: 100%
       margin: 0 0 20px 0
       text-align: center
 
-    img
-      display: block
-      float: left
-      height: auto !important
-      width: 100% !important
-      box-sizing: border-box
-      transition: all ease .5s
-      opacity: 1
-
-      &:hover
-        opacity: .25
-        +transform(scale(1.1))
+    &:hover
+      opacity: .5
 
   .galleryControls
     position: absolute
