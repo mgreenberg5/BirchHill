@@ -18,7 +18,7 @@ class Gallery
       galleryHTML = ''
 
       $.each(data.photos.photo, (i, photo) ->
-        galleryHTML += '<div class="thumb" style="background-image:url(https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '_m.jpg)" data-img="https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '"></div>')
+        galleryHTML += '<div class="thumb" style="background-image:url(https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '_n.jpg)" data-img="https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '"></div>')
       $('#Photos').append(galleryHTML)
       @_bindEventHandler()
     )
@@ -32,7 +32,7 @@ class Gallery
       $.each(data.photos.photo, (i, photo) ->
         featuredWorkHTML += '<div class="column oneFourth">'
         featuredWorkHTML += '<a href="gallery.html">'
-        featuredWorkHTML += '<img class="thumb" src="https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '_m.jpg">'
+        featuredWorkHTML += '<img class="thumb" src="https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '.jpg">'
         featuredWorkHTML += '</a>'
         featuredWorkHTML += '</div>'
       )
