@@ -13,11 +13,7 @@ class Gallery
       galleryHTML = ''
 
       $.each(data.photos.photo, (i, photo) ->
-        galleryHTML +=
-          '<div data-img="https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '" class="thumb">
-            <img src="https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '_m.jpg">
-          </div>'
-      )
+        galleryHTML += '<div class="thumb" style="background-image:url(https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '_m.jpg)" data-img="https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '"></div>')
       $('#Photos').append(galleryHTML)
       @_bindEventHandler()
 
