@@ -24,7 +24,7 @@ class Gallery
     )
 
   _flickerHttpRequestFeaturedWork: () ->
-    flickerAPI = 'https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=f0fcf8e2c366a04e2caa68f4b482021b&user_id=131046614%40N07&per_page=4&page=1&format=json&nojsoncallback=1'
+    flickerAPI = 'https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=75ef266514506ad0786961e0999b064e&user_id=131046614%40N07&per_page=4&page=1&format=json&nojsoncallback=1'
 
     $.getJSON(flickerAPI, (data) ->
       featuredWorkHTML = ''
