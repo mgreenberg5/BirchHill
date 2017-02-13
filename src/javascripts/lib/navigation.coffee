@@ -17,7 +17,6 @@ class NavigationController
   constructor: () ->
     @_animationSpeed = 300
     @_menuOpen = false
-    @_html = $("html")
     @_body = $("body")
     @_mobileMenu = $("#MoibleMenu")
     @_bodyOverlay = $(".bodyOverlay")
@@ -25,14 +24,12 @@ class NavigationController
   animateSideNav: () =>
     if @_menuOpen
       bodyXPosition = '0'
-      @_html.removeClass('hidden')
       @_body.removeClass('hidden')
       @_mobileMenu.removeClass('active')
       @_bodyOverlay.css("display", "none")
       @_menuOpen = false
     else
       bodyXPosition = '250px'
-      @_html.addClass('hidden')
       @_body.addClass('hidden')
       @_mobileMenu.addClass('active')
       @_bodyOverlay.css("display", "block")
