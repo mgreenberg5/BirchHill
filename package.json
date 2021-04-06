@@ -1,5 +1,5 @@
 {
-  "name": "Khov_Mortgages_Website",
+  "name": "Birch_Hill_Landscaping_Website",
   "version": "0.0.1",
   "description": "Birch Hill Landscaping Website",
   "main": "Gruntfile.js",
@@ -13,8 +13,7 @@
     "grunt-contrib-connect": "latest",
     "grunt-contrib-copy": "latest",
     "grunt-contrib-jade": "latest",
-    "grunt-contrib-sass": "latest",
-    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-uglify": "git://github.com/gruntjs/grunt-contrib-uglify.git#harmony",
     "grunt-contrib-watch": "latest"
   }
 }
