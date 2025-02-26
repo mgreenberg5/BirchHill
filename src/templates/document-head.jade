@@ -5,10 +5,8 @@ mixin document-head(pathPrefix)
     // ==================================================
     meta(charset="utf-8")
     title Birch Hill Landscaping - Landscape Architecture
-    meta(name="description" content="Birch Hill Landscaping - Landscape Architecture")
     meta(name="author" content="")
-    meta(name="keywords" content="Millburn 07041, Maplewood 07040, Short Hills 07078, Summit 07901, Chatham 07928, New Providence 07974, Berkeley Heights 07922, South Orange 07079, West Orange 07052, Morris Plains 07950, Morristown 07960, 07961, 07962, 07964 Morris county, Union county, Essex county Landscape design, Landscape architect, landscape architecture, landscape construction, landscape planning, landscape installation, masonry planting, sitting walls, kitchens, patios, decks, ponds streams, pools, swimming pools, screening, privacy planting, landscape lighting, low-voltage lighting, 12 volt lighting, accent lighting, security lighting, hardscaping, bluestone, brick, pavers, natural stone")
-    meta(name="description" content="Birch Hill Landscaping provides several services that are tailored specifically to each client. These services include Landscape Design, Landscape Architecture, Landscape Construction, Landscape Planning and Installation.")
+    meta(name="description" content="Birch Hill Landscaping specializes in custom landscape design, architecture, construction, and installation. Transform your outdoor space with expert planning and high-quality hardscaping, patios, pools, and more. Serving New Jersey with stunning, functional landscapes tailored to your needs.")
 
     // Mobile Specific Metas
     // ==================================================
@@ -19,7 +17,7 @@ mixin document-head(pathPrefix)
     // CSS
     // ==================================================
     link(type="text/css" rel="stylesheet" href="https://www.demandforced3.com/b/1/css/website.css")
-    link(type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300")
+    link(type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300")
     link(type="text/css" rel="stylesheet" href=pathPrefix + "css/main.css")
 
     // Scripts
@@ -27,6 +25,33 @@ mixin document-head(pathPrefix)
     script(src=pathPrefix + "javascripts/vendor/jquery-1.11.1.min.js")
     script(src=pathPrefix + "javascripts/vendor/sss.js")
     script(src=pathPrefix + "javascripts/main.min.js")
+    script(type="application/ld+json").
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Birch Hill Landscaping",
+        "image": "https://www.birchhillinc.com/images/logo@2x.png",
+        "@id": "https://www.birchhillinc.com",
+        "url": "https://www.birchhillinc.com",
+        "telephone": "973-376-0538",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "38 Chatham Road",
+          "addressLocality": "Short Hills",
+          "addressRegion": "NJ",
+          "postalCode": "07078",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.741895,
+          "longitude": -74.271003
+        },
+        "sameAs": [
+          "https://www.facebook.com/BirchHillLandscaping",
+          "https://twitter.com/birchhillinc"
+        ]
+      }
 
     // Favicons
     // ==================================================
