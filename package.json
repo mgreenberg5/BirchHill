@@ -5,7 +5,7 @@
   "main": "Gruntfile.js",
   "author": "Greenberg",
   "devDependencies": {
-    "grunt": "~0.4.1",
+    "grunt": "~1.6.1",
     "grunt-coffeelint": "latest",
     "grunt-contrib-clean": "latest",
     "grunt-contrib-coffee": "latest",
